@@ -3,23 +3,22 @@
 
 %PACCHETTI
 \RequirePackage[utf8]{inputenc}
-\RequirePackage{mathtools}
+\RequirePackage[unicode]{hyperref}
+
+\RequirePackage{aliascnt}
+\RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{amsthm}
-\RequirePackage{amsmath}
 \RequirePackage{faktor}
-\RequirePackage{wasysym}
 \RequirePackage{fancyhdr}
-\RequirePackage{lipsum}
-\RequirePackage{titlesec}
-\RequirePackage{setspace}
+\RequirePackage{mathtools}
 \RequirePackage{mdframed}
-\RequirePackage{aliascnt}
 \RequirePackage{minted}
+\RequirePackage{setspace}
+\RequirePackage{stmaryrd}
+\RequirePackage{titlesec}
 \RequirePackage{url}
 \RequirePackage{xcolor}
-\RequirePackage[unicode]{hyperref}
-\RequirePackage{stmaryrd}
 
 \RequirePackage{todonotes}
 
@@ -33,7 +32,7 @@
 \newcommand{\doubleline}[2]{{\genfrac{}{}{0pt}{}{#1\hfill}{#2\hfill}}}
 \newcommand{\svert}{\,\vert\,}
 
-\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 %\makeatletter
 %\let\oldabs\abs
 %\def\abs{\@ifstar{\oldabs}{\oldabs*}}
@@ -43,41 +42,25 @@
 %\makeatother
 
 % Theorems
-\theoremstyle{theorem}
+\theoremstyle{plain}
 \newtheorem{theorem}{Teorema}
 
-\theoremstyle{remark}
-\newaliascnt{remark}{theorem}
-\newtheorem{remark}[remark]{Osservazione}
-\aliascntresetthe{remark}
-\providecommand*{\remarkautorefname}{Osservazione}
-
-\theoremstyle{definition}
-\newaliascnt{definition}{theorem}
-\newtheorem{definition}[definition]{Definizione}
-\aliascntresetthe{definition}
-\providecommand*{\definitionautorefname}{Definizione}
-
-\theoremstyle{corollary}
-\newaliascnt{corollary}{theorem}
-\newtheorem{corollary}[corollary]{Corollario}
-\aliascntresetthe{corollary}
+\newtheorem{corollary}[theorem]{Corollario}
 \providecommand*{\corollaryautorefname}{Corollario}
 
-\theoremstyle{lemma}
-\newaliascnt{lemma}{theorem}
-\newtheorem{lemma}[lemma]{Lemma}
-\aliascntresetthe{lemma}
+\newtheorem{lemma}[theorem]{Lemma}
 \providecommand*{\lemmaautorefname}{Lemma}
 
-\theoremstyle{example}
-\newaliascnt{example}{theorem}
-\newtheorem{example}[example]{Esempio}
-\aliascntresetthe{example}
+\newtheorem{prop}[theorem]{Proposizione}
+\providecommand*{\propautorefname}{Proposizione}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Osservazione}
+\providecommand*{\remarkautorefname}{Osservazione}
+
+\newtheorem{example}[theorem]{Esempio}
 \providecommand*{\exampleautorefname}{Esempio}
 
-\theoremstyle{prop}
-\newaliascnt{prop}{theorem}
-\newtheorem{prop}[prop]{Proposizione}
-\aliascntresetthe{prop}
-\providecommand*{\propautorefname}{Proposizione}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definizione}
+\providecommand*{\definitionautorefname}{Definizione}
